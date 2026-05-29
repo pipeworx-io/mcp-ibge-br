@@ -1,0 +1,20 @@
+{
+  "name": "@pipeworx/mcp-ibge-br",
+  "version": "0.1.0",
+  "description": "IBGE (Instituto Brasileiro de Geografia e Estatística) MCP.",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "ibge-br"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pipeworx-io/mcp-ibge-br"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
