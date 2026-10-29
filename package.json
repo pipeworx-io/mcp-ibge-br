@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-ibge-br",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "IBGE (Instituto Brasileiro de Geografia e Estatística) MCP. Brazil's official statistics agency. Keyless public API.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-ibge-br": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "ibge-br"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-ibge-br.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/ibge-br",
   "pipeworx": {
-    "sourceHash": "v1-b8a250a3ed5a88e32040b06afa13526e3fe232fccbde51b091dd2189a3f39540",
-    "sourceCommit": "24e32b525f9c0b2fd7d94b519b08abb108cc11cd"
+    "mode": "gateway",
+    "slug": "ibge-br",
+    "gatewaySlug": "ibge-br",
+    "sourceHash": "v1-8221b3ccc8b2da136d4bfb4a0efb397f862f2193b651e09098326fd2df7891c9",
+    "sourceCommit": "4844029e402d6bd2fe735add8abf6d46735f8ed5"
   }
 }
